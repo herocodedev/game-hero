@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #172242;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+.choose {
+    background-color: red !important;
+    border-color: red !important;
+    color: #fff !important;
+}
+
+.active-user {
+    opacity: 0.2;
+}
+
+.active-computer {
+    opacity: 0.8;
+}
+
+:root {
+    --color-1: #4968F6;
+    --color-2: #EB9F0C;
+    --color-3: #DC2F4D;
+}
+
+.blue {
+    background-color: var(--color-1);
+}
+
+.gold {
+    background-color: var(--color-2);
+}
+
+.red {
+    background-color: var(--color-3);
+}
+
+.dn {
+    display: none;
+}
+
+.db {
+    display: block;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main .toolbar-score {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border: 2px solid #5D6983;
+    border-radius: 4px;
+}
+
+.main .toolbar-score .name-icon {
+    color: #fff;
+    font-weight: 1000;
+    font-size: 1.3rem;
+}
+
+.main .toolbar-score .name-icon span {
+    display: block;
+    padding: 0.3rem;
+}
+
+.main .toolbar-score .score {
+    text-align: center;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+}
+
+.main .toolbar-score .score span {
+    color: #172242;
+    font-size: 0.8rem;
+    font-weight: bolder;
+}
+
+.main .toolbar-score .score .number {
+    color: #000;
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+
+/* controls */
+
+.controls {
+    position: relative;
+    margin-top: 4rem;
+    width: 100%;
+}
+
+.controls .img-scissors-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 4rem;
+    border-radius: 50%;
+    color: #3C4262;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 1rem solid var(--color-1);
+    padding: 4rem;
+    left: 4rem;
+    cursor: pointer;
+    animation-name: scale;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+}
+
+.controls .img-paper-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 4rem;
+    border-radius: 50%;
+    color: #3C4262;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 1rem solid var(--color-2);
+    padding: 4rem;
+    left: 22rem;
+    cursor: pointer;
+    animation-name: scale;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+}
+
+.controls .img-rock-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 4rem;
+    border-radius: 50%;
+    color: #3C4262;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 1rem solid var(--color-3);
+    padding: 4rem;
+    top: 11rem;
+    left: 13rem;
+    cursor: pointer;
+    animation-name: scale;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+}
+
+.controls .img-scissors-computer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 4rem;
+    border-radius: 50%;
+    color: #3C4262;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 1rem solid var(--color-1);
+    padding: 4rem;
+    right: 4rem;
+    animation-name: rotate;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+}
+
+.controls .img-paper-computer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 4rem;
+    border-radius: 50%;
+    color: #3C4262;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 1rem solid var(--color-2);
+    padding: 4rem;
+    right: 22rem;
+    animation-name: rotate;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+}
+
+.controls .img-rock-computer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 4rem;
+    border-radius: 50%;
+    color: #3C4262;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 1rem solid var(--color-3);
+    padding: 4rem;
+    top: 11rem;
+    right: 13rem;
+    animation-name: rotate;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scale {
+    from {
+        transform: scale(1.2, 1.2);
+    }
+    to {
+        background-color: #000;
+        color: #fff;
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.rules {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid #ccc;
+    color: #fff;
+    border-radius: 4px;
+    transition: all linear 0.4s;
+}
+
+.count-time {
+    width: 100%;
+    text-align: center;
+    font-size: 2.4rem;
+    color: #e4ff00cc;
+}
+
+.rules:hover {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all linear 0.4s;
+}
+
+.rule-item {
+    position: absolute;
+    top: 1rem;
+}
+
+.rule-item img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.controls .player-1 {
+    top: -5rem;
+    position: absolute;
+    left: 14rem;
+    color: #fff;
+    font-size: 2.3rem;
+}
+
+.controls .player-2 {
+    top: -5rem;
+    position: absolute;
+    right: 14rem;
+    color: #fff;
+    font-size: 2.3rem;
+}
+
+
+/* menu play game */
+
+.menu {
+    cursor: pointer;
+    color: gold;
+    height: 100%;
+    text-align: center;
+    font-size: 2.8rem;
+}
+
+.menu:hover {
+    opacity: 0.5;
+}
+
+.user-win {
+    position: absolute;
+    top: 0;
+    font-size: 1.4rem;
+    left: 12rem;
+    color: gold;
+    font-weight: bold;
+}
+
+.user-lose {
+    position: absolute;
+    top: 0;
+    font-size: 1.4rem;
+    left: 12rem;
+    color: #ccc;
+    font-weight: bold;
+}
+
+.computer-win {
+    position: absolute;
+    top: 0;
+    font-size: 1.4rem;
+    right: 12rem;
+    color: gold;
+    font-weight: bold;
+}
+
+.computer-lose {
+    position: absolute;
+    top: 0;
+    font-size: 1.4rem;
+    right: 12rem;
+    color: #ccc;
+    font-weight: bold;
+}

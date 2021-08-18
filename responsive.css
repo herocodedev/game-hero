@@ -1,0 +1,24 @@
+/* Mobile,Tablet */
+
+@media only screen and (max-width: 63.975rem) {}
+
+
+/* Mobile: width < 740px */
+
+@media only screen and (max-width: 46.1875rem) {}
+
+
+/* Tablet: width >= 740px and width < 1024px */
+
+@media only screen and (min-width: 46.25rem) and (max-width: 63.9375rem) {
+    .controls .img-scissors {
+        left: 15rem;
+    }
+    .controls .img-paper {
+        right: 15rem;
+    }
+    .controls .img-rock {
+        top: 11rem;
+        left: 24rem;
+    }
+}
