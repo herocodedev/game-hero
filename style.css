@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #3B4664;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.main {
+    padding: 1.5rem 1rem;
+}
+
+.main .toolbar-math {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main .toolbar-math .calc {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.main .toolbar-math .theme {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 0.8rem;
+    width: 100px;
+    color: #fff;
+    padding: 0.8rem 0;
+    position: relative;
+}
+
+.main .toolbar-math .theme .theme-items {
+    display: flex;
+    font-size: 1.2rem;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.main .toolbar-math .theme .theme-items span {
+    padding: 0 0.2rem;
+    cursor: pointer;
+}
+
+.main .toolbar-math .theme .circle {
+    transition: all linear 0.3s;
+    cursor: pointer;
+    position: absolute;
+    left: 4px;
+    top: 1.6rem;
+    width: 0;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #c23564;
+    transition: all 0.5s ease;
+}
+
+
+/* screen */
+
+.screen {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    background-color: #191F32;
+}
+
+.screen span {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+}
+
+
+/* control */
+
+.controls {
+    border-radius: 4px;
+    background-color: #191F32;
+    padding: 1rem 1rem;
+}
+
+.controls .row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+.controls .row span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4D4C51;
+    width: 100px;
+    text-align: center;
+    background-color: #EBE4DD;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.controls .last-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.controls .last-row span {
+    cursor: pointer;
+    margin: 0 4px;
+    padding: 1rem 5.5rem;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background-color: #D13F2E;
+}
+
+.delete,
+.reset {
+    background-color: #647098 !important;
+    color: #fff !important;
+}
+
+.controls span:hover {
+    opacity: 0.6;
+}
